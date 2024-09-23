@@ -1,4 +1,4 @@
-# Replicate IMS DB to AWS with AWS Mainframe Modernization Data Replication Toolset
+# Replicate IMS DB to AWS with AWS Mainframe Modernization Data Replication using Precisely
 
 This project contains AWS CDK code to deploy infrastructure for Precisely Replication analysis. The infrastructure is best deployed in region which has at-least 3 availability zones (like `us-east-1`).
 
