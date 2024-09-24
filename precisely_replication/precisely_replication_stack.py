@@ -7,6 +7,7 @@ from aws_cdk import (
 from .components.network.vpc import VPC
 from .components.backend.msk import MSK
 from .components.backend.redshift import Redshift
+from .components.backend.ec2_iam import EC2_IAM
 from .components.frontend.quicksight import Quicksight
 from constructs import Construct
 
@@ -40,6 +41,11 @@ class PreciselyReplicationStack(Stack):
             vpc=network.vpc,
             subnet_ids=network.subnet_ids,
             kms=kms_key,
+        )
+
+        EC2_IAM(
+            self,
+            "PreciselyEC2IAM",
         )
 
         Quicksight(
